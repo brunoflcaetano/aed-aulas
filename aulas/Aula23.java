@@ -50,7 +50,7 @@ public static String removeCaracterFrase(String frase, String caracter, char c){
 
 
 
-return fraseSemCaracter;
+return "";
 
 
 
@@ -58,7 +58,7 @@ return fraseSemCaracter;
 
 
 
-}
+
 
 
     public static void main(String[] args) {
@@ -72,7 +72,8 @@ return fraseSemCaracter;
 
    System.out.println(converterPosParaMaiscula(st1, 4));
 
-
+    } 
+}
     //   (st1.equals(st2));     // false
     //   System.out.println(st1.length());        // 10
     //   System.out.println(st1.charAt(7));       // 'm'
@@ -87,13 +88,6 @@ return fraseSemCaracter;
 
     //   for (i = 0; i < st1.length(); i++) {     // Percorre cada caractere
     //       System.out.println(st1.charAt(i));   // Mostra Cada caractere de "Algoritmos"
-      }
-
-
-
-
-
     
-
-    }
+    
 
