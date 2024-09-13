@@ -1,5 +1,7 @@
 package aulas;
 
+import libs.Entrada;
+
 public class Aula24 {
 
 
