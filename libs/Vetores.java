@@ -16,6 +16,19 @@ public static int[] alocarInteiros(int n){
     return vetores;
 }
 
+public static String[] alocarString(int n){
+
+    int i;
+    String[] vetores;
+    
+    vetores = new String[n];
+
+    for(i = 0; i < vetores.length; i++){
+        vetores[i] = "";
+}
+    return vetores;
+}
+
 public static void mostrar(int[] vetor){
 
     int i;
@@ -81,5 +94,51 @@ int i = 0;
 }
 
 
+public static int[] LerInteiros(int n){
 
+Entrada.abrir();
+int[] valores = alocarInteiros(n);
+
+for(int i = 0; i < n; i++){
+    valores[i] = Entrada.lerInt();
+
+}
+Entrada.fechar();
+return valores;
+
+
+}
+
+
+public static String[] LerString(int n){
+
+    Entrada.abrir();
+    String[] valores = alocarString(n);
+    
+    for(int i = 0; i < n; i++){
+        valores[i] = Entrada.lerString("");
+    
+    }
+    Entrada.fechar();
+    return valores;
+    
+    
+    }
+    
+
+    public int obterPosicao(int[] vetor, int pos_inicial, int valor_buscar){
+
+        int i = 0;
+
+        for(i = pos_inicial; i < vetor.length; i++){
+            if (vetor[i] == valor_buscar) {
+                return i;
+            }
+        }
+
+
+
+    return -1;
+
+}
 }
