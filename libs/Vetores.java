@@ -141,4 +141,21 @@ public static String[] LerString(int n){
     return -1;
 
 }
+
+
+
+    public int obterIndice(int[] v, int valor_buscar){
+       
+        int i = 0;
+        int contador;
+
+        for(i = valor_buscar; i < v.length; i++){
+            
+
+        }
+
+
+    
+    return 0;
+    }
 }
