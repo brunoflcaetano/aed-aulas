@@ -1,5 +1,6 @@
 import aulas.*;
 import libs.Entrada;
+import trabalhos.*;
 
 public class Main{
 
@@ -9,9 +10,9 @@ public class Main{
 public static void main(String[] args) {
     System.out.println("-- Algoritmos e Estruturas de Dados --");
 
-    Aula28.aula();
+    // Aula28.aula();
 
-
+    Bim2R1.trabalho();
 
 }
 
