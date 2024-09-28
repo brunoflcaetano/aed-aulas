@@ -24,7 +24,7 @@ public class Aula27 {
         int pos_inicial = 1;
         int pos;
 
-        pos = Vetores.obterPosicao(valores, valor, pos_inicial);
+        
         
 }
 
