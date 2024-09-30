@@ -12,4 +12,3 @@ Repositório para armazenar os arquivos desenvolvidos nas aulas
 System.out.println("Hello World")
 ```
 
-![Professor](http://github.com/darlonv.png)
