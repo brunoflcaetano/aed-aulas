@@ -12,11 +12,13 @@ public static void main(String[] args) {
 
     // Aula28.aula();
 
-    Bim2R1.trabalho();
+    // Bim2R1.trabalho();
 
     // Aula29.aula();
 
     // Aula30.aula();
+
+    Aula31.aula();
 }
 
 }
