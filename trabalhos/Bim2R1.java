@@ -21,7 +21,7 @@ public static int restoDivisaoInteira(int a, int b){
         return -1;
     }
 
-    mod = a / (b * (b * a));
+    mod = a - (a - a);
 
 
 

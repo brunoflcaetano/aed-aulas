@@ -5,7 +5,7 @@ public class Aula29 {
 
     public static void aula(){
 
-        ex03();
+        ex01();
 
     }
  
@@ -32,7 +32,7 @@ public class Aula29 {
 
         m3 = Matrizes.somar(m1, m2);
 
-        Matrizes.mostrar(m3);
+       Matrizes.getLinha(m3, n_linhas);
 
 
 
