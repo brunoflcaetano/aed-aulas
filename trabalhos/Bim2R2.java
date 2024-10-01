@@ -50,7 +50,7 @@ public class Bim2R2 {
             return 1;
         }
 
-        // 3 + 5 = 8
+        
 
         return fibonacciRec(x - 1) + fibonacciRec(x - 2); //modifique para o retorno correto
         //#######################################
