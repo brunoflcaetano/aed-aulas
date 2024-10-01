@@ -8,8 +8,15 @@ public class Bim2R2 {
         //#######################################
         //Implemente aqui sua solução
 
-        
-        return 0; //modifique para o retorno correto
+        if (x == y) {
+            return x;
+        }
+        if (x < y) {
+            return mdcRec(y, x);
+        }
+
+
+        return mdcRec(x - y, y); //modifique para o retorno correto
         //#######################################
     }
 
@@ -19,9 +26,13 @@ public class Bim2R2 {
 
         //#######################################
         //Implemente aqui sua solução
+        if (y == 0) {
+            return 1;
+        }
 
 
-        return 0; //modifique para o retorno correto
+
+        return x * potenciaRec(x, y - 1); //modifique para o retorno correto
         //#######################################
     }
 
@@ -32,8 +43,16 @@ public class Bim2R2 {
         //#######################################
         //Implemente aqui sua solução
 
+        if (x < 1) {
+            return 0;
+        }
+        if (x == 1) {
+            return 1;
+        }
 
-        return 0; //modifique para o retorno correto
+        // 3 + 5 = 8
+
+        return fibonacciRec(x - 1) + fibonacciRec(x - 2); //modifique para o retorno correto
         //#######################################
     }
 

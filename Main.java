@@ -18,7 +18,12 @@ public static void main(String[] args) {
 
     // Aula30.aula();
 
-    Aula31.aula();
+    // Aula31.aula();
+
+
+    Bim2R2.testesMDCRec();
+    Bim2R2.testesPotenciaRec();
+    Bim2R2.testesFibonacciRec();
 }
 
 }

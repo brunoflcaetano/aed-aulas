@@ -59,9 +59,6 @@ public class Aula31 {
             Scanner entrada = new Scanner(arquivo);
 
             for(i = 0; i < arquivo.length(); i++){
-                quantidade = entrada.nextInt();
-                qtd_total = quantidade - 1;
-                soma = soma + qtd_total;
             }
 
             media = soma / qtd_total;
