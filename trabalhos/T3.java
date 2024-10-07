@@ -79,22 +79,62 @@ public static boolean[] aplicarELogico(boolean[] v, boolean[] w){
     novoVetor = new boolean[v.length];
 
     for(i = 0; i < v.length; i++){
-        for(j = 0; j < w.length; i++){
-            if (v[i] && w[j]) {
-                novoVetor = new boolean[i];
-            }
-
+           novoVetor[i] = v[i] && w[i];
+            
+        
         }
-
-
-    }
-    
-
 
 
 
     return novoVetor;
 }
+
+public static boolean[] aplicarOuLogico(boolean[] v, boolean[] w){
+
+    int i;
+    int j;
+    boolean[] novoVetor;
+    novoVetor = new boolean[v.length];
+
+    for(i = 0; i < v.length; i++){
+           novoVetor[i] = v[i] || w[i];
+            
+        
+        }
+
+
+
+    return novoVetor;
+}
+
+public static void aplicarMascara(int[] v, boolean[] mascara){
+
+
+int i;
+int j;
+boolean[] verdade;
+verdade = new boolean[mascara.length];
+
+for(i = 0; i < v.length; i++){
+for(j = 0; j < mascara.length; j++){
+    if(mascara[j] = true) {
+        verdade[j] = mascara[j];
+    }
+}
+
+if (condition) {
+    
+}
+
+
+
+
+
+}
+
+
+}
+
 
 
 }

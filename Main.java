@@ -20,13 +20,12 @@ public static void main(String[] args) {
 
     // Aula31.aula();
 
-    T3.trabalho();
+    // T3.trabalho();
 
-//     Bim2R2.testesMDCRec();
-//     Bim2R2.testesPotenciaRec();
-//     Bim2R2.testesFibonacciRec();
-// 
+  
+}
 }
 
-}
+
+
 
