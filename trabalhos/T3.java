@@ -115,22 +115,25 @@ int j;
 boolean[] verdade;
 verdade = new boolean[mascara.length];
 
-for(i = 0; i < v.length; i++){
+
 for(j = 0; j < mascara.length; j++){
     if(mascara[j] = true) {
         verdade[j] = mascara[j];
     }
 }
 
-if (condition) {
-    
+for(i = 0; i < v.length; i++){
+    if (v[i] == verdade) {
+        
+    }
+
+
 }
 
 
 
 
 
-}
 
 
 }
