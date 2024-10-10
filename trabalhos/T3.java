@@ -1,12 +1,15 @@
 package trabalhos;
 
+import libs.Vetores;
+
+
 public class T3 {
     
     public static void trabalho(){
 
 
-        boolean[] v = {true, true, false, false};
-        boolean[] w = {false, true, false, false};
+        int[] v = {1, 2, 3, 4};
+        int[] w = {5, 6, 7, 8};
 
 
         // filtrarMaiores(vetor, 6);
@@ -14,7 +17,7 @@ public class T3 {
         // aplicarELogico(null, null)
 
         // mostrarInteiros(vetor);
-        aplicarELogico(v, w);
+      
     }
 
 public static void mostrarInteiros(int[] v){
@@ -41,7 +44,7 @@ public static int[] filtrarMaiores(int[] vetor, int n){
 
     for(i = 0; i < vetor.length; i++){
         if (i > n) {
-            novoVetor[i] = vetor[i];
+            novoVetor[0] = vetor[i];
            
             System.out.print("[ " + novoVetor[i] + " ] ");
         }
@@ -111,32 +114,59 @@ public static void aplicarMascara(int[] v, boolean[] mascara){
 
 
 int i;
+int j = 0;
+int cont = 0;
+
+for(i = 0; i < mascara.length; i++){
+    if (mascara[i] == true) {
+    cont++;
+}
+}
+
+int[] verdade;
+verdade = new int[cont];
+
+for(i = 0; i < mascara.length; i++){
+    if (mascara[i] == true) {
+        verdade[j] = v[i];
+        j++;
+    }
+}
+
+mostrarInteiros(verdade);
+}
+
+
+public static int[] vetorUniao(int[] v, int[] w){
+
+int i;
 int j;
-boolean[] verdade;
-verdade = new boolean[mascara.length];
+int cont = 0;
 
+int tamanhoV = v.length;
+int tamanhoW = w.length;
+int tamanhoT = tamanhoV + tamanhoW;
 
-for(j = 0; j < mascara.length; j++){
-    if(mascara[j] = true) {
-        verdade[j] = mascara[j];
+int[] uniao;
+uniao = new int[tamanhoT];
+
+for(i = 0; i < v.length;i++){
+    uniao[0] = v[i];
+    for(j = 0; j < w.length; j++){
+    if (w[j] != uniao[i]) {
+        uniao[i] = w[j];
     }
-}
-
-for(i = 0; i < v.length; i++){
-    if (v[i] == verdade) {
-        
+ 
     }
 
-
 }
 
 
-
-
-
+return uniao;
 
 
 }
+
 
 
 
