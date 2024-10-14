@@ -3,7 +3,7 @@ import libs.Entrada;
 import trabalhos.*;
 
 
-public class Main{
+ public class Main{
 
 
 
@@ -47,17 +47,32 @@ public static int[] vetorUniao(int[] v, int[] w){
     int[] uniao;
     uniao = new int[tamanhoT]; 
     
-    for(i = 0; i < v.length;i++){
+    for(i = 0; i < v.length; i++){
         uniao[i] = v[i];
+
     }
 
-    for(j = 0; j < uniao.length; j++){
-        if (w[j] == uniao[j]) {
-            uniao[i] = w[j];
+    int index = v.length;
+
+    for(j = 0; j < w.length; j++){
+        boolean existe = false;
+
+        for(int k = 0; k < index; k++){
+            if(w[j] == uniao[index]){
+                existe = true;
+                break;
+            }
+
         }
-     
+        if (!existe) {
+            uniao[index] = w[j];
+            index++;
         }
+
+    }
     
+   
+
     return uniao;
     
     

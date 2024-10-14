@@ -139,35 +139,73 @@ mostrarInteiros(verdade);
 
 public static int[] vetorUniao(int[] v, int[] w){
 
-int i;
-int j;
-int cont = 0;
+    int i;
+    int j;
+    int cont = 0;
+    
+    int tamanhoV = v.length;
+    int tamanhoW = w.length;
+    int tamanhoT = tamanhoV + tamanhoW;
+    
+    int[] uniao;
+    uniao = new int[tamanhoT]; 
+    
+    for(i = 0; i < v.length; i++){
+        uniao[i] = v[i];
 
-int tamanhoV = v.length;
-int tamanhoW = w.length;
-int tamanhoT = tamanhoV + tamanhoW;
+    }
 
-int[] uniao;
-uniao = new int[tamanhoT];
+    int index = v.length;
 
-for(i = 0; i < v.length;i++){
-    uniao[0] = v[i];
     for(j = 0; j < w.length; j++){
-    if (w[j] != uniao[i]) {
-        uniao[i] = w[j];
+        boolean existe = false;
+
+        for(int k = 0; k < index; k++){
+            if(w[j] == uniao[index]){
+                existe = true;
+                break;
+            }
+
+        }
+        if (!existe) {
+            uniao[index] = w[j];
+            index++;
+        }
+
     }
- 
+    
+   
+
+    return uniao;
+    
+    
     }
+
+    
+
+public static int[] vetorInterseção(int[] v, int[] w){
+
+
+    int i;
+    int j = 0;
+    int cont = 0;
+
+    int[] interseção;
+    interseção = new int[v.length];
+    
+    for(i = 0; i < v.length; i++){
+        for(j = 0; j < w.length; j++){
+            if (v[i] == w[j]) {
+                interseção[i] = v[i];
+
+            }
+        }
+    }
+    
+
+    return interseção;
 
 }
-
-
-return uniao;
-
-
-}
-
-
 
 
 }
