@@ -141,8 +141,7 @@ public static int[] vetorUniao(int[] v, int[] w){
 
     int i;
     int j;
-    int cont = 0;
-    
+  
     int tamanhoV = v.length;
     int tamanhoW = w.length;
     int tamanhoT = tamanhoV + tamanhoW;
@@ -187,8 +186,8 @@ public static int[] vetorInterseção(int[] v, int[] w){
 
 
     int i;
-    int j = 0;
-    int cont = 0;
+    int j;
+    int k = 0;
 
     int[] interseção;
     interseção = new int[v.length];
@@ -196,15 +195,49 @@ public static int[] vetorInterseção(int[] v, int[] w){
     for(i = 0; i < v.length; i++){
         for(j = 0; j < w.length; j++){
             if (v[i] == w[j]) {
-                interseção[i] = v[i];
-
+                interseção[k] = v[i];
+                k++;
             }
         }
-    }
     
+    }
+
 
     return interseção;
 
+}
+
+
+
+public static int[] vetorDiferença(int[] v, int[] w){
+
+    int i;
+    int j;
+    int k = 0;
+
+    int[] diferença;
+    diferença = new int[v.length];
+
+ 
+
+    for(i = 0; i < v.length; i++){
+        boolean existe = false;
+
+
+        for(j = 0; j < w.length; j++){
+            if (v[i] == w[j]) {
+           existe = true;
+           break;
+            }
+        }
+        if (!existe) {
+            diferença[k] = v[i];
+            k++;
+        }
+
+    }
+
+    return diferença;
 }
 
 
