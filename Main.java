@@ -21,9 +21,9 @@ public static void main(String[] args) {
 
     // Aula31.aula();
 
-    Bim2R3
+    Bim2R3.rec();
 
-    T3.trabalho();
+    // T3.trabalho();
 
   
 
