@@ -8,9 +8,21 @@ public class T3 {
     public static void trabalho(){
 
 
-        int[] v = {1, 2, 3, 4};
-        int[] w = {5, 6, 7, 8};
+        int[][] m1;
+        int n_linhas = 2;
+        int n_colunas = 3;
 
+        m1 = new int[n_linhas][n_colunas];
+        
+
+        m1[0][0] = 7;
+        m1[0][1] = 20;
+        // m1[0][2] = 18;
+        m1[1][0] = 9;
+        m1[1][1] = 3;
+        // m1[1][2] = 6;
+
+        matrizTransposta(m1);
 
         // filtrarMaiores(vetor, 6);
 
@@ -137,7 +149,7 @@ mostrarInteiros(verdade);
 }
 
 
-public static int[] vetorUniao(int[] v, int[] w){
+public static void vetorUniao(int[] v, int[] w){
 
     int i;
     int j;
@@ -175,14 +187,14 @@ public static int[] vetorUniao(int[] v, int[] w){
     
    
 
-    return uniao;
+    mostrarInteiros(uniao);
     
     
     }
 
     
 
-public static int[] vetorInterseção(int[] v, int[] w){
+public static void vetorInterseção(int[] v, int[] w){
 
 
     int i;
@@ -203,13 +215,13 @@ public static int[] vetorInterseção(int[] v, int[] w){
     }
 
 
-    return interseção;
+    mostrarInteiros(interseção);
 
 }
 
 
 
-public static int[] vetorDiferença(int[] v, int[] w){
+public static void vetorDiferença(int[] v, int[] w){
 
     int i;
     int j;
@@ -237,9 +249,50 @@ public static int[] vetorDiferença(int[] v, int[] w){
 
     }
 
-    return diferença;
+    mostrarInteiros(diferença);
+}
+
+public static int[][] matrizTransposta(int[][] a){
+
+int i, j;
+int[][] transposta; 
+transposta = new int[a[0].length][a.length];
+
+for(i = 0; i < a.length; i++){
+    for(j = 0; j < a[i].length; j++){
+       if (j > i || j < i) {
+        transposta[i][j] = a[j][i];
+    }
+    if (i == j) {
+        transposta[i][j] = a[i][j];
+
+    }
+    }
+
+
+
+}
+
+for(i = 0; i < transposta.length; i++){
+    for(j = 0; j < transposta[i].length; j++){ //n na posição i 
+        System.out.print(transposta[i][j] + " ");
+    }
+    System.out.println();
 }
 
 
+return transposta;
+
+
+
+
 }
+   
+    
+}
+
+
+
+
+
 
