@@ -1,7 +1,7 @@
 import aulas.*;
 import libs.Entrada;
 import trabalhos.*;
-
+import libs.Matrizes;
 
  public class Main{
 
@@ -21,13 +21,12 @@ public static void main(String[] args) {
 
     // Aula31.aula();
 
-    Bim2R3.rec();
+    // Bim2R3.rec();
 
     // T3.trabalho();
 
-  
-
 }
+
 
  }
 

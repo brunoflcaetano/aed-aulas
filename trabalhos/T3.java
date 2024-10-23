@@ -199,7 +199,7 @@ public static void vetorInterseção(int[] v, int[] w){
 
     int i;
     int j;
-    int k = 0;
+    int k = 0; 
 
     int[] interseção;
     interseção = new int[v.length];
@@ -252,7 +252,7 @@ public static void vetorDiferença(int[] v, int[] w){
     mostrarInteiros(diferença);
 }
 
-public static int[][] matrizTransposta(int[][] a){
+public static int[][] matrizTranspor(int[][] a){
 
 int i, j;
 int[][] transposta; 
@@ -260,36 +260,65 @@ transposta = new int[a[0].length][a.length];
 
 for(i = 0; i < a.length; i++){
     for(j = 0; j < a[i].length; j++){
-       if (j > i || j < i) {
+    
         transposta[i][j] = a[j][i];
-    }
-    if (i == j) {
-        transposta[i][j] = a[i][j];
 
     }
-    }
 
 
-
-}
-
-for(i = 0; i < transposta.length; i++){
-    for(j = 0; j < transposta[i].length; j++){ //n na posição i 
-        System.out.print(transposta[i][j] + " ");
-    }
-    System.out.println();
 }
 
 
 return transposta;
-
-
-
-
 }
    
-    
+public static int[][] matrizPermutacaoLinhas(int[][] m, int indiceA, int indiceB){
+
+        
+    int[] armaz = m[indiceA];
+    m[indiceA] = m[indiceB];
+    m[indiceB] = armaz;
+
+        
+
+    return m;
+
+    }
+
+
+public static int[][] multiplicaçaoMatrizes(int m1[][], int m2[][]){
+
+
+int linha1 = m1.length;
+int coluna1 = m1[0].length;
+int coluna2 = m2[0].length;
+
+int[][] resultado;
+resultado = new int[linha1][coluna2];
+
+for(int i = 0; i < m1.length; i++){
+    for(int j = 0; j < m2[0].length; j++){
+        for(int k = 0; k < m2.length; k++){
+            resultado[i][j] += m1[i][k] * m2[k][j];
+
+
+
+        }
+    }
 }
+
+return resultado;
+
+
+
+}
+
+
+}
+
+
+    
+
 
 
 
