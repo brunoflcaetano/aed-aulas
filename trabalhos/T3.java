@@ -115,16 +115,16 @@ public static void aplicarMascara(int[] v, boolean[] mascara){
 
 int i;
 int j = 0;
-int cont = 0;
+int existe = 0;
 
 for(i = 0; i < mascara.length; i++){
     if (mascara[i] == true) {
-    cont++;
+    existe++;
 }
 }
 
 int[] verdade;
-verdade = new int[cont];
+verdade = new int[existe];
 
 for(i = 0; i < mascara.length; i++){
     if (mascara[i] == true) {
