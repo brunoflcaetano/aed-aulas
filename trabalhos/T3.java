@@ -8,21 +8,10 @@ public class T3 {
     public static void trabalho(){
 
 
-        int[][] m1;
-        int n_linhas = 2;
-        int n_colunas = 3;
+        int[][] matrizA = {{1, 2}, {3, 4}};
+        int[][] matrizB = {{5, 6}, {7, 8}};
 
-        m1 = new int[n_linhas][n_colunas];
-        
-
-        m1[0][0] = 7;
-        m1[0][1] = 20;
-        // m1[0][2] = 18;
-        m1[1][0] = 9;
-        m1[1][1] = 3;
-        // m1[1][2] = 6;
-
-        matrizTransposta(m1);
+        multiplicaçaoMatrizes(matrizA, matrizB);
 
         // filtrarMaiores(vetor, 6);
 
@@ -119,10 +108,10 @@ public static boolean[] aplicarOuLogico(boolean[] v, boolean[] w){
 
 
 
-    return novoVetor;
+    return novoVetor; 
 }
 
-public static void aplicarMascara(int[] v, boolean[] mascara){
+public static int[] aplicarMascara(int[] v, boolean[] mascara){
 
 
 int i;
@@ -145,11 +134,11 @@ for(i = 0; i < mascara.length; i++){
     }
 }
 
-mostrarInteiros(verdade);
+    return verdade;
 }
 
 
-public static void vetorUniao(int[] v, int[] w){
+public static int[] vetorUniao(int[] v, int[] w){
 
     int i;
     int j;
@@ -187,14 +176,14 @@ public static void vetorUniao(int[] v, int[] w){
     
    
 
-    mostrarInteiros(uniao);
+    return uniao;
     
     
     }
 
     
 
-public static void vetorInterseção(int[] v, int[] w){
+public static int[] vetorInterseção(int[] v, int[] w){
 
 
     int i;
@@ -214,14 +203,14 @@ public static void vetorInterseção(int[] v, int[] w){
     
     }
 
-
-    mostrarInteiros(interseção);
+ 
+    return interseção;
 
 }
 
 
 
-public static void vetorDiferença(int[] v, int[] w){
+public static int[] vetorDiferença(int[] v, int[] w){
 
     int i;
     int j;
@@ -249,7 +238,7 @@ public static void vetorDiferença(int[] v, int[] w){
 
     }
 
-    mostrarInteiros(diferença);
+    return diferença;
 }
 
 public static int[][] matrizTranspor(int[][] a){
@@ -275,13 +264,38 @@ return transposta;
 public static int[][] matrizPermutacaoLinhas(int[][] m, int indiceA, int indiceB){
 
         
-    int[] armaz = m[indiceA];
-    m[indiceA] = m[indiceB];
-    m[indiceB] = armaz;
+    int[] armaz = new int[m.length];
+    // m[indiceA] = m[indiceB];
+    // m[indiceB] = armaz;
 
-        
+    for(int i = 0; i < m[0].length; i++){
+        armaz[i] = m[indiceA][i];
+    }    
+
+    for(int i = 0; i < m[0].length; i++){
+        m[indiceA][i] = m[indiceB][i];
+    }    
+    for(int i = 0; i < m[0].length; i++){
+       m[indiceB][i] = armaz[i];
+    }    
+
+
 
     return m;
+
+
+    //teste:
+    // int[][] matriz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+    // int[][] resultado = matrizPermutacaoLinhas(matriz, 1, 2);
+
+
+    // for (int i = 0; i < resultado.length; i++) {
+    //     for (int j = 0; j < resultado[i].length; j++) {
+    //         System.out.print(resultado[i][j] + " ");
+    //     }
+    //     System.out.println(); 
+    // }
 
     }
 
