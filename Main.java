@@ -23,22 +23,22 @@ public static void main(String[] args) {
 
     // Bim2R3.rec();
 
-    // T3.trabalho();
+    T3.trabalho();
 
-    int[][] matrizA = {{1, 2,}, {3, 4}};
-    int[][] matrizB = {{5, 6,}, {7, 8}};
+    // int[][] matrizA = {{1, 8,}, {2, 9}};
+    // int[][] matrizB = {{5, 6,}, {3, 0}};
 
-    int[][] matriz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    // int[][] matriz = {{0, 3, 9}, {14, 5, 6}, {4, 6, 9}};
 
-    int[][] resultado = multiplicaçaoMatrizes(matrizB, matrizA);
+    // int[][] resultado = multiplicaçaoMatrizes(matrizB, matrizA);
 
 
-    for (int i = 0; i < resultado.length; i++) {
-        for (int j = 0; j < resultado[i].length; j++) {
-            System.out.print(resultado[i][j] + " ");
-        }
-        System.out.println(); 
-    }
+    // for (int i = 0; i < resultado.length; i++) {
+    //     for (int j = 0; j < resultado[i].length; j++) {
+    //         System.out.print(resultado[i][j] + " ");
+    //     }
+    //     System.out.println(); 
+    // }
 }
 
 
