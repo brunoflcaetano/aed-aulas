@@ -13,9 +13,9 @@ public class T3 {
         int[][] matrizB = { { 5, 6, }, { 3, 0 } };
         int[][] matriz = { { 0, 3, 9 }, { 14, 5, 6 } };
 
-        vetorUniao(v1, v2);
+       filtrarMaiores(v2, 5);
 
-        int[] resultado = vetorUniao(v1, v2);
+        int[] resultado = filtrarMaiores(v2, 5);
 
         System.out.print("[ ");
         for(int i = 0; i < resultado.length; i++){
@@ -45,16 +45,16 @@ public class T3 {
 
     }
 
-    public static void mostrarInteiros(int[] v) {
+    public static void mostrarInteiros(int[] v, char c) {
 
-        System.out.print(" ' ");
+        System.out.print(c);
         for (int i = 0; i < v.length; i++) {
             System.out.print(v[i]);
             if (i < v.length - 1) {
-                System.out.print(" x ");
+                System.out.print(c);
             }
         }
-        System.out.println(" ' ");
+        System.out.println(c);
 
     }
 
@@ -64,18 +64,25 @@ public class T3 {
         novoVetor = new int[vetor.length];
 
         int i;
+        int tamanho = 0;
 
         for (i = 0; i < vetor.length; i++) {
-            if (i > n) {
-                novoVetor[0] = vetor[i];
-
-                System.out.print("[ " + novoVetor[i] + " ] ");
-            }
-
-        }
-        return novoVetor;
-
+           if (vetor[i] > n) {
+            tamanho++;
+           }
     }
+
+        novoVetor = new int[tamanho];
+
+        for (i = 0; i < vetor.length; i++) {
+                novoVetor[i] = vetor[i];
+            
+            
+        }
+    
+        return novoVetor;
+    }
+    
 
     public static int[] filtrarMenores(int[] vetor, int n) {
 
