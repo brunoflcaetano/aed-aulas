@@ -47,19 +47,20 @@ public class T3 {
 
     public static void mostrarInteiros(int[] v, char c) {
 
-        System.out.print(c);
+      
         for (int i = 0; i < v.length; i++) {
             System.out.print(v[i]);
             if (i < v.length - 1) {
                 System.out.print(c);
             }
         }
-        System.out.println(c);
+        System.out.println();
 
     }
 
     public static int[] filtrarMaiores(int[] vetor, int n) {
 
+        int j = 0;
         int[] novoVetor;
         novoVetor = new int[vetor.length];
 
@@ -75,8 +76,10 @@ public class T3 {
         novoVetor = new int[tamanho];
 
         for (i = 0; i < vetor.length; i++) {
-                novoVetor[i] = vetor[i];
-            
+           if (vetor[i] > n) {
+                 novoVetor[j] = vetor[i];
+                     j++;
+           }
             
         }
     
@@ -86,22 +89,34 @@ public class T3 {
 
     public static int[] filtrarMenores(int[] vetor, int n) {
 
+      
+        int j = 0;
         int[] novoVetor;
         novoVetor = new int[vetor.length];
 
         int i;
+        int tamanho = 0;
 
         for (i = 0; i < vetor.length; i++) {
-            if (i < n) {
-                novoVetor[i] = vetor[i];
-
-                System.out.print("[ " + novoVetor[i] + " ] ");
-            }
-
-        }
-        return novoVetor;
-
+           if (vetor[i] < n) {
+            tamanho++;
+           }
     }
+
+        novoVetor = new int[tamanho];
+
+        for (i = 0; i < vetor.length; i++) {
+             if (vetor[i] < n) {
+                   novoVetor[j] = vetor[i];
+                       j++;
+               
+             }
+        }
+    
+        return novoVetor;
+    }
+
+    
 
     public static boolean[] aplicarELogico(boolean[] v, boolean[] w) {
 

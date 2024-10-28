@@ -23,7 +23,25 @@ public static void main(String[] args) {
 
     // Bim2R3.rec();
 
-    T3.trabalho();
+    // T3.trabalho();
+
+    
+    int[] v2 = { 0, 2, 45, 5, 2, 9 };
+    char teste = 'x';
+    mostrarInteiros(v2, teste);
+
+    // filtrarMaiores(v2, 5);
+
+    int[] resultado = filtrarMaiores(v2, 5);
+
+    System.out.print("[ ");
+    for(int i = 0; i < resultado.length; i++){
+    System.out.print(resultado[i]);
+    if (i < resultado.length - 1) {
+    System.out.print(", ");
+    }
+    }
+    System.out.print(" ]");
 
     // int[][] matrizA = {{1, 8,}, {2, 9}};
     // int[][] matrizB = {{5, 6,}, {3, 0}};
@@ -42,32 +60,46 @@ public static void main(String[] args) {
 }
 
 
+public static void mostrarInteiros(int[] v, char c) {
 
-public static int[][] multiplicaçaoMatrizes(int m1[][], int m2[][]){
-
-
-    int linha1 = m1.length;
-    int coluna1 = m1[0].length;
-    int coluna2 = m2[0].length;
-    
-    int[][] resultado;
-    resultado = new int[linha1][coluna2];
-    
-    for(int i = 0; i < m1.length; i++){
-        for(int j = 0; j < m2[0].length; j++){
-            for(int k = 0; k < m2.length; k++){
-                resultado[i][j] += m1[i][k] * m2[k][j];
-    
-    
-    
-            }
+      
+    for (int i = 0; i < v.length; i++) {
+        System.out.print(v[i]);
+        if (i < v.length - 1) {
+            System.out.print(c);
         }
     }
-    
-    return resultado;
-    
-    
-    
+    System.out.println();
+
+}
+
+
+public static int[] filtrarMaiores(int[] vetor, int n) {
+
+    int j = 0;
+    int[] novoVetor;
+    novoVetor = new int[vetor.length];
+
+    int i;
+    int tamanho = 0;
+
+    for (i = 0; i < vetor.length; i++) {
+       if (vetor[i] > n) {
+        tamanho++;
+       }
+}
+
+    novoVetor = new int[tamanho];
+
+    for (i = 0; i < vetor.length; i++) {
+           if (vetor[i] > n) {
+             novoVetor[j] = vetor[i];
+                 j++;
+         
+           }
+    }
+
+    return novoVetor;
 }
  }
 
