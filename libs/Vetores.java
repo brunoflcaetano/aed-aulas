@@ -1,4 +1,5 @@
 package libs;
+import java.util.Random;
 
 public class Vetores {
     
@@ -157,5 +158,72 @@ public static String[] LerString(int n){
 
     
     return 0;
+
+}
+
+public static int buscaSequencial(int[] v, int x){
+
+    for(int i = 0; i < v.length; i++){
+        if (v[i] == x) {
+            return i;
+        }
     }
+    return -1;
+
+}
+
+
+public static int[] gerarValoresAleatorios(int n, int valor_min, int valor_max) {
+        Random random = new Random();
+        int[] vetor = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            // Gera um número aleatório entre min (inclusivo) e max (inclusivo),
+            //   e salva na posição i do vetor
+            vetor[i] = random.nextInt(valor_max - valor_min + 1) + valor_min;
+        }
+        
+        return vetor;
+
+
+
+
+
+
+}
+
+public static int buscaBinaria(int[] v, int valor_buscar){
+
+    int ini, meio, fim;
+
+    ini = 0;
+    fim = v.length;
+
+    while (ini <= fim) {
+        meio = (ini + fim) / 2;
+        if (v[meio] == valor_buscar) {
+            return meio;
+        }else{
+            if (valor_buscar < v[meio]) {
+                fim = meio -1;
+            }else{
+                ini = meio +1;
+            }
+
+        }
+    } 
+
+
+    return -1;
+
+
+
+
+}
+
+ 
+
+
+
+
 }
