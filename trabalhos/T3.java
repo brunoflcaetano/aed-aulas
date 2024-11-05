@@ -254,7 +254,7 @@ public class T3 {
 
         int[] diferença;
         diferença = new int[v.length];
-
+        
         for (i = 0; i < v.length; i++) {
             boolean existe = false;
 
@@ -268,11 +268,14 @@ public class T3 {
                 diferença[k] = v[i];
                 k++;
             }
+            
 
         }
         
        
-    
+        
+
+
         return diferença;
 
     }
