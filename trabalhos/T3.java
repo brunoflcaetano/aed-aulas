@@ -173,7 +173,7 @@ public class T3 {
         return verdade;
     }
 
-    public static int[] vetorUniao(int[] v, int[] w) {
+    public static int[] uniao(int[] v, int[] w) {
 
         int i;
         int j;
@@ -223,7 +223,7 @@ public class T3 {
 
 
 
-    public static int[] vetorInterseção(int[] v, int[] w) {
+    public static int[] intersecao(int[] v, int[] w) {
 
         int i;
         int j;
@@ -246,7 +246,7 @@ public class T3 {
 
     }
 
-    public static int[] vetorDiferença(int[] v, int[] w) {
+    public static int[] diferenca(int[] v, int[] w) {
 
         int i;
         int j;
@@ -270,8 +270,11 @@ public class T3 {
             }
 
         }
-
+        
+       
+    
         return diferença;
+
     }
 
     public static int[][] matrizTranspor(int[][] a) {
@@ -325,7 +328,7 @@ public class T3 {
 
     }
 
-    public static int[][] multiplicaçaoMatrizes(int m1[][], int m2[][]) {
+    public static int[][] matrizMultInt(int m1[][], int m2[][]) {
 
         int linha1 = m1.length;
         int coluna1 = m1[0].length;

@@ -6,6 +6,7 @@ build:
 	javac -d bin Main.java	
 	javac -d bin trabalhos/*.java
 
+
 run:
 	java -cp bin Main
 

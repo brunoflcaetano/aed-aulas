@@ -23,7 +23,12 @@ public static void main(String[] args) {
 
     // Bim2R3.rec();
 
-    Aula32.aula();
+    // Aula32.aula();
+
+    // T3.trabalho();
+
+    Aula33.aula();
+  
 
     
  }
