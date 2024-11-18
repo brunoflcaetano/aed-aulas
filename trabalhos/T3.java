@@ -242,8 +242,14 @@ public class T3 {
 
         }
 
-        return interseção;
+        
+        int[] resultado = new int[k];
+        for (i = 0; i < k; i++) {
+            resultado[i] = interseção[i];
+          
+        }
 
+        return resultado;
     }
 
     public static int[] diferenca(int[] v, int[] w) {
@@ -272,12 +278,13 @@ public class T3 {
 
         }
         
-       
-        
+        int[] resultado = new int[k];
+        for (int m = 0; m < k; m++) {
+            resultado[m] = diferença[m];
+          
+        }
 
-
-        return diferença;
-
+        return resultado;
     }
 
     public static int[][] matrizTranspor(int[][] a) {
