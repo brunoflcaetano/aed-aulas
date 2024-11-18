@@ -11,23 +11,9 @@ import libs.Matrizes;
 public static void main(String[] args) {
     System.out.println("-- Algoritmos e Estruturas de Dados --");
 
-    // Aula28.aula();
-
-    // Bim2R1.trabalho();
-
-    // Aula29.aula();
-
-    // Aula30.aula();
-
-    // Aula31.aula();
-
-    // Bim2R3.rec();
-
-    // Aula32.aula();
-
     // T3.trabalho();
 
-    Aula33.aula();
+    Aula35.aula();
   
 
     
