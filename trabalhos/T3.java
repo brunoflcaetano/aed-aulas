@@ -51,7 +51,7 @@ public class T3 {
         for (int i = 0; i < v.length; i++) {
             System.out.print(v[i]);
             if (i < v.length - 1) {
-                System.out.print(c);
+                System.out.print(" " + c + " ");
             }
         }
         System.out.println();
