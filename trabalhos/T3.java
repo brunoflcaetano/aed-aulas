@@ -177,27 +177,25 @@ public class T3 {
 
         int i;
         int j;
-
-        int tamanhoV = v.length;
-        int tamanhoW = w.length;
-        int tamanhoT = tamanhoV + tamanhoW;
+        int tamanhoT = v.length + w.length;
 
         int[] uniao;
         uniao = new int[tamanhoT];
 
+        int index =0;
+
         for (i = 0; i < v.length; i++) {
-            uniao[i] = v[i];
-
+            uniao[index] = v[i];
+            index++;
         }
-
-        int index = v.length;
+    
 
 
         for (j = 0; j < w.length; j++) {
             boolean existe = false;
 
-            for (int k = 0; k < uniao.length; k++) {
-                if (w[j] == uniao[k]) {
+            for (int k = 0; k < v.length; k++) {
+                if (w[j] == v[k]) {
                     existe = true;
                  break;
                 
@@ -205,13 +203,15 @@ public class T3 {
             
             }
 
-            if (existe == false) {
+            if (!existe) {
                 uniao[index] = w[j];
                 index++;
 
         }
+    }
 
-        }
+
+
 
         int[] resultado = new int[index];
         for (i = 0; i < index; i++) {
@@ -258,8 +258,11 @@ public class T3 {
         int j;
         int k = 0;
 
-        int[] diferença;
-        diferença = new int[v.length];
+        
+        int tamanhoV = v.length;
+        int tamanhoW = w.length;
+        int tamanhoT = tamanhoV + tamanhoW;
+        int[] diferença = new int[tamanhoT];
         
         for (i = 0; i < v.length; i++) {
             boolean existe = false;
@@ -270,13 +273,31 @@ public class T3 {
                     break;
                 }
             }
+
             if (!existe) {
                 diferença[k] = v[i];
                 k++;
             }
-            
+    }
 
+      
+    for (i = 0; i < w.length; i++) {
+        boolean existe = false;
+
+        for (j = 0; j < v.length; j++) {
+            if (w[i] == v[j]) {
+                existe = true;
+                break;
+            }
         }
+        if (!existe) {
+            diferença[k] = w[i];
+            k++;
+        }
+        
+
+    }
+
         
         int[] resultado = new int[k];
         for (int m = 0; m < k; m++) {
@@ -296,7 +317,7 @@ public class T3 {
         for (i = 0; i < a.length; i++) {
             for (j = 0; j < a[i].length; j++) {
 
-                transposta[i][j] = a[j][i];
+                transposta[j][i] = a[i][j];
 
             }
 
