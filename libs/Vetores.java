@@ -221,9 +221,105 @@ public static int buscaBinaria(int[] v, int valor_buscar){
 
 }
 
+public static int[] subVetor(int[]v, int ini, int fim){
+
+
+    int k=0;
+
+    int[] sub_vetor = new int[fim - ini];
+
+    for(int i = ini; i < fim; i++){
+        sub_vetor[k] = v[i];
+        k++;
+    }
+
+    return sub_vetor;
+
+}
+
+
+
+
+public static int[] merge(int[] va, int[] vb){
+
+    int[] vc;
+    vc = new int[va.length + vb.length];
+
+    int i=0, j=0, k=0;
+
+    while (i < va.length && j < vb.length) {
+        if (va[i] < vb[j]) {
+            vc[k] = va[i]; 
+            i++;
+        }else{
+            vc[k] = vb[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < va.length) {
+        vc[k] = va[i];
+        i++;
+        k++;
+    }
+
+    while (j < vb.length) {
+        vc[k] = vb[j];
+        j++;
+        k++;
+    }
+
+    return vc;
+
+}
+
+
+    public static int[] mergeSort(int[] v){
+
+        int[] ve_ordenado, vd_ordenado, v_ordenado;
+        if (v.length <= 1) {
+            return v;
+        }
+
+        int[] v_esq, v_dir;
+        int meio = v.length/2;
+        v_esq = subVetor(v, 0, meio);
+        v_dir = subVetor(v, meio, v.length);
+
+        ve_ordenado = mergeSort(v_esq);
+        vd_ordenado = mergeSort(v_dir);
+        v_ordenado = merge(ve_ordenado, vd_ordenado);
+
+        return v_ordenado;
+
+
+
+
  
+    }
+
+    static int quickSortPartCormen(int[] v, int ini, int fim) {
+        int pivot = v[fim]; //<- pivô é o último elemento
+        int pos_menores = ini - 1; //<- menores ou iguais que o pivô
+
+        for (int i = ini; i < fim; i++) {
+            if (v[i] <= pivot) {
+                pos_menores++;
+                troca(v, pos_menores, i);
+            }
+        }
+        pos_menores++;
+        troca(v, pos_menores, fim);
+        return pos_menores;
+    }
+
+
+
+
 
 
 
 
 }
+
