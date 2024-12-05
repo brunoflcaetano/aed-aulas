@@ -7,39 +7,159 @@ public class T4 {
     
     public static void trabalho(){
         
-        Tempo.medirTempoIniciar();
-        bubbleSort1();
-
+    bubbleSort1();
+    insertion();
+    selection();
+    merge();
+    quick();
+    couting();
+    radix();
 
     }
 
 
     public static void bubbleSort1(){
+        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        System.out.println("Entrada: ");
+        // Vetores.mostrar(valores);
+        System.out.println(valores.length);
 
         
-        int[] valores = Vetores.gerarValoresAleatorios(1000, 1,1000);
-        System.out.println("Entrada: ");
-        Vetores.mostrar(valores);
-
-        System.out.println("Saida");
+        long tempo_inicio = Tempo.medirTempoIniciar();
+        // System.out.println("Saida");
         Vetores.bubbleSort(valores);
         int[] v_ordenado = valores;
-        Vetores.mostrar(v_ordenado);
+        // Vetores.mostrar(v_ordenado);
+        double temp_segundos = Tempo.medirTempoFinalizarSegundos(tempo_inicio);
+        
 
+        System.out.printf("Tempo de ordenação com " + valores.length + " elementos, utilizando Algoritmo BubbleSort: " + temp_segundos + " segundos ");
+        System.out.println();
+        System.out.println();
     }
 
-    // public static void Insertion(){
 
-    //     int[] valores = Vetores.gerarValoresAleatorios(10000, 1,10000);
-    //     System.out.println("Entrada: ");
-    //     Vetores.mostrar(valores);
+    public static void insertion(){
+        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        System.out.println("Entrada: ");
+        // Vetores.mostrar(valores);
+        System.out.println(valores.length);
 
-    //     System.out.println("Saida");
-    //     int[] v_ordenado = Vetores.insertionSort(valores);
-    //     Vetores.mostrar(v_ordenado);
+        
+        long tempo_inicio = Tempo.medirTempoIniciar();
+        // System.out.println("Saida");
+        Vetores.insertionSort(valores);
+        int[] v_ordenado = valores;
+        // Vetores.mostrar(v_ordenado);
+        double temp_segundos = Tempo.medirTempoFinalizarSegundos(tempo_inicio);
+        
 
-    // }
+        System.out.printf("Tempo de ordenação com " + valores.length + " elementos, utilizando Algoritmo InsertionSort: " + temp_segundos + " segundos ");
+        System.out.println();
+        System.out.println();
+    }
 
+    public static void selection(){
+        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        System.out.println("Entrada: ");
+        // Vetores.mostrar(valores);
+        System.out.println(valores.length);
+
+        
+        long tempo_inicio = Tempo.medirTempoIniciar();
+        // System.out.println("Saida");
+        Vetores.selectionSort(valores);
+        int[] v_ordenado = valores;
+        // Vetores.mostrar(v_ordenado);
+        double temp_segundos = Tempo.medirTempoFinalizarSegundos(tempo_inicio);
+        
+
+        System.out.printf("Tempo de ordenação com " + valores.length + " elementos, utilizando Algoritmo SelectionSort: " + temp_segundos + " segundos ");
+        System.out.println();
+        System.out.println();
+    }
+
+    
+    public static void merge(){
+        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        System.out.println("Entrada: ");
+        // Vetores.mostrar(valores);
+        System.out.println(valores.length);
+
+        
+        long tempo_inicio = Tempo.medirTempoIniciar();
+        // System.out.println("Saida");
+        Vetores.mergeSort(valores);
+        int[] v_ordenado = valores;
+        // Vetores.mostrar(v_ordenado);
+        double temp_segundos = Tempo.medirTempoFinalizarSegundos(tempo_inicio);
+        
+
+        System.out.printf("Tempo de ordenação com " + valores.length + " elementos, utilizando Algoritmo mergeSort: " + temp_segundos + " segundos ");
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void quick(){
+        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        System.out.println("Entrada: ");
+        // Vetores.mostrar(valores);
+        System.out.println(valores.length);
+
+        
+        long tempo_inicio = Tempo.medirTempoIniciar();
+        // System.out.println("Saida");
+        Vetores.quickSort(valores);
+        int[] v_ordenado = valores;
+        // Vetores.mostrar(v_ordenado);
+        double temp_segundos = Tempo.medirTempoFinalizarSegundos(tempo_inicio);
+        
+
+        System.out.printf("Tempo de ordenação com " + valores.length + " elementos, utilizando Algoritmo QuickSort: " + temp_segundos + " segundos ");
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void couting(){
+        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        System.out.println("Entrada: ");
+        // Vetores.mostrar(valores);
+        System.out.println(valores.length);
+
+        
+        long tempo_inicio = Tempo.medirTempoIniciar();
+        // System.out.println("Saida");
+        Vetores.coutingSort(valores, 1);
+        int[] v_ordenado = valores;
+        // Vetores.mostrar(v_ordenado);
+        double temp_segundos = Tempo.medirTempoFinalizarSegundos(tempo_inicio);
+        
+
+        System.out.printf("Tempo de ordenação com " + valores.length + " elementos, utilizando Algoritmo CoutingSort: " + temp_segundos + " segundos ");
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void radix(){
+        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        System.out.println("Entrada: ");
+        // Vetores.mostrar(valores);
+        System.out.println(valores.length);
+
+        
+        long tempo_inicio = Tempo.medirTempoIniciar();
+        // System.out.println("Saida");
+        Vetores.radixSort(valores);
+        int[] v_ordenado = valores;
+        // Vetores.mostrar(v_ordenado);
+        double temp_segundos = Tempo.medirTempoFinalizarSegundos(tempo_inicio);
+        
+
+    
+        System.out.printf("Tempo de ordenação com " + valores.length + " elementos, utilizando Algoritmo RadixSort: " + temp_segundos + " segundos ");
+        System.out.println();
+        System.out.println();
+    }
 
 
 }

@@ -12,7 +12,7 @@ import libs.Vetores;
 
 public static void main(String[] args) {
     System.out.println("-- Algoritmos e Estruturas de Dados --");
-    System.out.println(Matematica.potencia(2, 2));
+
 
     // T3.trabalho();
 
