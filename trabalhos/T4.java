@@ -17,9 +17,16 @@ public class T4 {
 
     }
 
+    public static int[] tamanhoVetor(){
+
+        int [] valores = Vetores.gerarValoresAleatorios(1000000, 1, 1000000);
+
+        return valores;
+    }
+
 
     public static void bubbleSort1(){
-        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        int[] valores = tamanhoVetor();
         System.out.println("Entrada: ");
         // Vetores.mostrar(valores);
         System.out.println(valores.length);
@@ -40,7 +47,7 @@ public class T4 {
 
 
     public static void insertion(){
-        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        int[] valores = tamanhoVetor();
         System.out.println("Entrada: ");
         // Vetores.mostrar(valores);
         System.out.println(valores.length);
@@ -60,7 +67,7 @@ public class T4 {
     }
 
     public static void selection(){
-        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        int[] valores = tamanhoVetor();
         System.out.println("Entrada: ");
         // Vetores.mostrar(valores);
         System.out.println(valores.length);
@@ -78,10 +85,10 @@ public class T4 {
         System.out.println();
         System.out.println();
     }
-
+ 
     
     public static void merge(){
-        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        int[] valores = tamanhoVetor();
         System.out.println("Entrada: ");
         // Vetores.mostrar(valores);
         System.out.println(valores.length);
@@ -101,7 +108,7 @@ public class T4 {
     }
 
     public static void quick(){
-        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        int[] valores = tamanhoVetor();
         System.out.println("Entrada: ");
         // Vetores.mostrar(valores);
         System.out.println(valores.length);
@@ -121,7 +128,7 @@ public class T4 {
     }
 
     public static void couting(){
-        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        int[] valores = tamanhoVetor();
         System.out.println("Entrada: ");
         // Vetores.mostrar(valores);
         System.out.println(valores.length);
@@ -141,7 +148,7 @@ public class T4 {
     }
 
     public static void radix(){
-        int[] valores = Vetores.gerarValoresAleatorios(100000, 1,100000);
+        int[] valores = tamanhoVetor();
         System.out.println("Entrada: ");
         // Vetores.mostrar(valores);
         System.out.println(valores.length);
